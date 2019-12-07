@@ -1,0 +1,55 @@
+#mainBar {
+  width: 99vw;
+  height: 8vh;
+  background-color: #2980B9;
+  position: fixed;
+  top:0;
+  left: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 40px;
+  color: white;
+  user-select: none;
+  padding-left: 1vw;
+}
+#invertBtn {
+  width: 4vw;
+  height: 8vh;
+  border: none;
+  outline: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: inherit;
+}
+#container {
+  width: 100vw;
+  height: 90vh;
+  position: absolute;
+  top:8.1vh;
+  left:0;
+}
+#board {
+  font-family: 'Alata', sans-serif;
+  font-size: 20px;
+  width: 96.5vw;
+  height: 78vh;
+  position: absolute;
+  background-color: #F2F4F4;
+  color: black;
+  padding-left: 3vw;
+  padding-top: 1vw;
+  resize:none;
+}
+#board::selection{
+  background-color: #A9DDFF;
+}
+#position {
+  background-color: #34495E;
+  color: white;
+  font-family: 'Alata';
+  padding-left: 2vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
