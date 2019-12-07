@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Quick-Pad</title>
+    <link rel="stylesheet" href="master.css">
+    <link href="https://fonts.googleapis.com/css?family=Alata|Quicksand:500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="mainBar">Quick Pad</div>
+    <button id="invertBtn" onclick="invertColor(this.value)" value="light"><i class="small material-icons">invert_colors</i></button>
+    <div id="container">
+      <textarea id="board" onkeyup="caretPos(this)" rows="19"></textarea>
+    </div>
+    <span id="position">1,0</span>
+  </body>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+  <script type="text/javascript">
+    window.onload = function(){
+      document.getElementById("board").focus();
+    };
+    function caretPos(textarea){
+      var textLines = textarea.value.substr(0, textarea.selectionStart).split("\n");
+      var currentLineNumber = textLines.length;
+      var currentColumnIndex = textLines[textLines.length-1].length;
+      document.getElementById("position").innerHTML = currentLineNumber+","+currentColumnIndex;
+    }
+    function invertColor(color){
+      if(color=="light"){
+        container.style.backgroundColor = "black";
+        board.style.backgroundColor = "#1E1F1F";
+        board.style.color = "white";
+        mainBar.style.backgroundColor = "#205273";
+        mainBar.style.color = "#EEE";
+        invertBtn.value = 'dark';
+      }
+      if(color=="dark"){
+        container.style.backgroundColor = "white";
+        board.style.backgroundColor = "#F2F4F4";
+        board.style.color = "black";
+        mainBar.style.backgroundColor = "#2980B9";
+        mainBar.style.color = "#FFF";
+        invertBtn.value = 'light';
+      }
+    }
+    </script>
+</html>
