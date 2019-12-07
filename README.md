@@ -9,3 +9,6 @@ You will require **Electron.js** to run this app.
 
 Implementation:
 ![](https://raw.githubusercontent.com/datmemerboi/Quick-Pad/master/Working.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/datmemerboi/Quick-Pad/master/Working.png">
+</p>
