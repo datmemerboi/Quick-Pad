@@ -25,6 +25,11 @@
       var currentLineNumber = textLines.length;
       var currentColumnIndex = textLines[textLines.length-1].length;
       document.getElementById("position").innerHTML = currentLineNumber+","+currentColumnIndex;
+      if(textarea.selectionStart!=textarea.selectionEnd)
+      {
+        var already = document.getElementById("position").innerHTML;
+        document.getElementById("position").innerHTML = already+" | "+textarea.selectionStart+","+textarea.selectionEnd;
+      }
     }
     function invertColor(color){
       if(color=="light"){
