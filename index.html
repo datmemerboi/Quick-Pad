@@ -21,9 +21,9 @@
       document.getElementById("board").focus();
     };
     function caretPos(textarea){
-      var textLines = textarea.value.substr(0, textarea.selectionStart).split("\n");
-      var currentLineNumber = textLines.length;
-      var currentColumnIndex = textLines[textLines.length-1].length;
+      var Lines = textarea.value.substr(0, textarea.selectionStart).split("\n");
+      var currentLineNumber = Lines.length;
+      var currentColumnIndex = Lines[Lines.length-1].length;
       document.getElementById("position").innerHTML = currentLineNumber+","+currentColumnIndex;
       if(textarea.selectionStart!=textarea.selectionEnd)
       {
