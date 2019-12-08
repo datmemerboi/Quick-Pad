@@ -11,7 +11,7 @@
     <div id="mainBar">Quick Pad</div>
     <button id="invertBtn" onclick="invertColor(this.value)" value="light"><i class="small material-icons">invert_colors</i></button>
     <div id="container">
-      <textarea id="board" onkeyup="caretPos(this)" rows="19"></textarea>
+      <textarea id="board" onkeyup="caretPos(this)"></textarea>
     </div>
     <span id="position">1,0</span>
   </body>
@@ -22,9 +22,9 @@
     };
     function caretPos(textarea){
       var Lines = textarea.value.substr(0, textarea.selectionStart).split("\n");
-      var currentLineNumber = Lines.length;
-      var currentColumnIndex = Lines[Lines.length-1].length;
-      document.getElementById("position").innerHTML = currentLineNumber+","+currentColumnIndex;
+      var currentRow = Lines.length;
+      var currentCol = Lines[Lines.length-1].length;
+      document.getElementById("position").innerHTML = currentRow+","+currentCol;
       if(textarea.selectionStart!=textarea.selectionEnd)
       {
         document.getElementById("position").innerHTML = document.getElementById("position").innerHTML+" | "+textarea.selectionStart+","+textarea.selectionEnd;
