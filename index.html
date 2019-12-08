@@ -27,8 +27,7 @@
       document.getElementById("position").innerHTML = currentLineNumber+","+currentColumnIndex;
       if(textarea.selectionStart!=textarea.selectionEnd)
       {
-        var already = document.getElementById("position").innerHTML;
-        document.getElementById("position").innerHTML = already+" | "+textarea.selectionStart+","+textarea.selectionEnd;
+        document.getElementById("position").innerHTML = document.getElementById("position").innerHTML+" | "+textarea.selectionStart+","+textarea.selectionEnd;
       }
     }
     function invertColor(color){
